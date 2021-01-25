@@ -21,10 +21,12 @@ divs = document.querySelectorAll(`.simplediv`)
 // iterate over all the cells and add an eventlistener
 divs.forEach(element => element.addEventListener("mouseover", setColor));
 
-    function setColor(e){
-        e.target.style.background=color
+function setColor(e) {
+    e.target.style.background = color
 }
 
-
+function resetCanvas() {
+    divs.forEach(element => element.style.background = "white");
+}
 
 
