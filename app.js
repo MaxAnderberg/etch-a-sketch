@@ -2,7 +2,8 @@
 
 const drawingBoard = document.getElementById("grid-container")
 let value = 16; // TODO: extract value from input from website
-drawingBoard.style.gridTemplateColumns = `repeat(${value}, 0fr)`;
+
+drawingBoard.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
 totalCellAmount = value * value;
 
