@@ -1,7 +1,7 @@
 
 
 const drawingBoard = document.getElementById("grid-container")
-let value = 16; // TODO: extract value from input from website
+let value = 4; // TODO: extract value from input from website
 
 drawingBoard.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
@@ -32,4 +32,9 @@ function resetCanvas() {
     divs.forEach(element => element.style.background = "white");
 }
 
-
+// let myGridSize = document.getElementById("gridsize")
+// console.log(myGridSize)
+function setGridSizeValue(){
+    let fP = document.getElementById('gridSize').innerHTML;
+    console.log(fP)
+}
