@@ -13,7 +13,6 @@ for (let index = 1; index <= totalCellAmount; index++) {
 
 }
 let divs = document.getElementsByClassName('simplediv');
-color = "red"
 
 
 // get all the cells
@@ -21,10 +20,13 @@ divs = document.querySelectorAll(`.simplediv`)
 // iterate over all the cells and add an eventlistener
 divs.forEach(element => element.addEventListener("mouseover", setColor));
 
+color = "red"
+// color the cell
 function setColor(e) {
     e.target.style.background = color
 }
 
+// reset the canvas to white
 function resetCanvas() {
     divs.forEach(element => element.style.background = "white");
 }
