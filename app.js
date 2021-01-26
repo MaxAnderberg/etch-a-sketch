@@ -1,27 +1,49 @@
 
 
-const drawingBoard = document.getElementById("grid-container")
-let value = 4; // TODO: extract value from input from website
-
-drawingBoard.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
-
-totalCellAmount = value * value;
-
-for (let index = 1; index <= totalCellAmount; index++) {
-    let div = document.createElement('div');
-    div.classList.add('simplediv')
-    drawingBoard.appendChild(div)
-
+// set the grid size
+function setGridSizeValue() {
+    createGrid(document.getElementById('gridSize').innerHTML);
 }
-let divs = document.getElementsByClassName('simplediv');
 
+function clearOldCells() {
+    
+    // get all the cells
+    let divs = document.querySelectorAll(`.simplediv`)
+    // remove all cells called simplediv
+    divs.forEach(element => element.parentNode.removeChild(element));
+}
 
-// get all the cells
-divs = document.querySelectorAll(`.simplediv`)
-// iterate over all the cells and add an eventlistener
-divs.forEach(element => element.addEventListener("mouseover", setColor));
+function createGrid(value) {
 
-color = "red"
+    // clear out the old cells before we add new
+    clearOldCells();
+
+    const drawingBoard = document.getElementById("grid-container")
+    let totalCellAmount = value * value;
+
+    drawingBoard.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+
+    for (let index = 1; index <= totalCellAmount; index++) {
+        let div = document.createElement('div');
+        div.classList.add('simplediv')
+        drawingBoard.appendChild(div)
+    }
+
+    setMouseOverListener();
+}
+
+let value = 16;
+createGrid(value);
+
+function setMouseOverListener() {
+
+    // get all the cells
+    let divs = document.querySelectorAll(`.simplediv`)
+    // iterate over all the cells and add an eventlistener
+    divs.forEach(element => element.addEventListener("mouseover", setColor));
+}
+
+let color = "red"
 // color the cell
 function setColor(e) {
     e.target.style.background = color
@@ -30,11 +52,4 @@ function setColor(e) {
 // reset the canvas to white
 function resetCanvas() {
     divs.forEach(element => element.style.background = "white");
-}
-
-// let myGridSize = document.getElementById("gridsize")
-// console.log(myGridSize)
-function setGridSizeValue(){
-    let fP = document.getElementById('gridSize').innerHTML;
-    console.log(fP)
 }
