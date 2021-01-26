@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pixel Sketch</title>
     <link rel="stylesheet" href="styles/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Test</h1>
+    <nav class="top-nav-container">
+        <div class="top-left">
+            <span> <img id="pencil-icon" src="https://img.icons8.com/ios-glyphs/96/000000/pencil--v1.png"/> Pixel Sketch</span>
+        </div>
+        <div class="top-right">
+            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png"/><a href="https://github.com/MaxAnderberg">GitHub</a></span>
+            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/linkedin.png"/><a href="https://www.linkedin.com/in/max-anderberg-810609116?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjOYOIuVSQ1CKyiUhOofzkQ%3D%3D">LinkedIn</a></span>
+        </div>
+    </nav>
+
     <div id="container-container">
-        <section id="grid-container"></section>
+        <section id="grid-container">
+
+        </section>
+
+        <div class="control-container">
+            <label id="gridText" for="gridsize">Canvas size</label>
+            <input type="range" id="gridsize" name="gridsize" min="1" max="100" value="16"
+                oninput="document.getElementById('gridSize').innerHTML = this.value">
+            <label id="gridSize">16</label>
+            <button onclick="setGridSizeValue()">Create new canvas</button>
+            <button onclick="resetCanvas()">Reset Canvas</button>
+
+        </div>
     </div>
     <script src="app.js"></script>
-    <button onclick="resetCanvas()">Reset Canvas</button>
-
-    <div>
-        <label for="gridsize">Canvas size</label>
-        <input type="range" id="gridsize" name="gridsize" min="1" max="100" value="16"
-            oninput="document.getElementById('gridSize').innerHTML = this.value">
-        <label id="gridSize"></label>
-        <button onclick="setGridSizeValue()">Create new canvas</button>
-    </div>
-
-
-
 </body>
 
 </html>

@@ -6,7 +6,7 @@ function setGridSizeValue() {
 }
 
 function clearOldCells() {
-    
+
     // get all the cells
     let divs = document.querySelectorAll(`.simplediv`)
     // remove all cells called simplediv
@@ -51,5 +51,7 @@ function setColor(e) {
 
 // reset the canvas to white
 function resetCanvas() {
+    let divs = document.querySelectorAll(`.simplediv`)
     divs.forEach(element => element.style.background = "white");
+    
 }

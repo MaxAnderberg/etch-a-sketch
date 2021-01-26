@@ -1,12 +1,20 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
 #grid-container{
     display: grid;
-    height: 80vh;
-    width: 80vh;
+    height: 78vh;
+    width: 78vh;
+    margin-top: 2%;
     
 }
 
 #container-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -14,5 +22,85 @@
 .simplediv{
     display: block;
     border: 1px rgba(0, 0, 0, 0.03) solid;
+}
 
+
+
+.top-nav-container{
+    background-color: #FFC164;
+    display: flex;
+    position: relative;
+    height: 8vh;
+    top: 0%;
+    width: 100%;
+    font-weight: 700;
+}
+
+.top-right{
+    display: inline-flex;
+    width: 50%;
+    align-items: center;
+    float: right;
+    justify-content: flex-end;
+    margin-right: 2%;
+    font-size: 24px;
+}
+
+.top-left{
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    align-self: center;
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+.control-container{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: #FFC164;
+    padding: 1%;
+    margin-left: 1%;
+    border:none;
+    border-radius: 13px;
+    font-size: 16px;
+}
+
+#gridText{
+    margin-right: 1%;
+}
+
+#gridsize{
+    margin-right: 1%;
+}
+
+span:first-child{
+    margin-right: 2%;
+}
+
+img{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#pencil-icon{
+    height: 50px;
+    width: 50px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    border-bottom: 1px solid black;    
 }
