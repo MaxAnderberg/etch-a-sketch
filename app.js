@@ -2,7 +2,7 @@
 
 // set the grid size
 function setGridSizeValue() {
-    createGrid(document.getElementById('gridSize').innerHTML);
+    createGrid(document.getElementById('gridvalue').innerHTML);
 }
 
 function clearOldCells() {

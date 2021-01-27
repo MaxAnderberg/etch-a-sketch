@@ -123,7 +123,8 @@ a:hover{
     opacity: 0.7;
     height: 10px;
     width: 12%;
-    
+    margin-right: 2%;
+
 }
 
 #gridsize:hover{
@@ -148,4 +149,9 @@ a:hover{
     background: black;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#gridvalue{
+    position: absolute;
+    margin-right: 3%;
 }
