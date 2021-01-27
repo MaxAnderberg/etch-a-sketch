@@ -55,3 +55,11 @@ function resetCanvas() {
     divs.forEach(element => element.style.background = "white");
     
 }
+
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }

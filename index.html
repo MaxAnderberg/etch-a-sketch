@@ -33,9 +33,21 @@
             <label id="gridvalue">16</label>
             <button onclick="setGridSizeValue()">Create new canvas</button>
             <button onclick="resetCanvas()">Reset Canvas</button>
+            <label for="colorpicker">Color Picker:</label>
+            <input type="color" id="colorpicker" value="#0000ff">
 
         </div>
     </div>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      <button class="openbtn" onclick="openNav()">Tools</button>  
+
     <script src="app.js"></script>
 </body>
 
