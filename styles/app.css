@@ -6,8 +6,8 @@ body{
 
 #grid-container{
     display: grid;
-    height: 78vh;
-    width: 78vh;
+    height: 76vh;
+    width: 76vh;
     margin-top: 2%;
     
 }
@@ -72,6 +72,7 @@ button{
     font-size: 16px;
 }
 
+
 #gridText{
     margin-right: 1%;
 }
@@ -99,8 +100,52 @@ img{
 a{
     color: black;
     text-decoration: none;
+    /* border-bottom:solid 1px transparent; */
+
 }
 
 a:hover{
-    border-bottom: 1px solid black;    
+
+    /* border-bottom: 1px solid black;     */
+    text-decoration:underline; 
+    
+}
+
+#gridsize{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #FFC164;
+    border-radius: 13px;
+    -webkit-transition: 0.2ms;
+    transition: 0.2ms;
+    outline:none;
+    opacity: 0.7;
+    height: 10px;
+    width: 12%;
+    
+}
+
+#gridsize:hover{
+    opacity: 1;
+    /* add box shadow here */
+}
+
+#gridsize::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#gridsize::-moz-range-thumb{
+    width: 22px;
+    height: 22px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
 }
