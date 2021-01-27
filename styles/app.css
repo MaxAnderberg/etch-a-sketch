@@ -100,6 +100,7 @@ img{
 a{
     color: black;
     text-decoration: none;
+    transition: 0.3s;
     /* border-bottom:solid 1px transparent; */
 
 }
@@ -108,7 +109,8 @@ a:hover{
 
     /* border-bottom: 1px solid black;     */
     text-decoration:underline; 
-    
+    color: whitesmoke;
+
 }
 
 #gridsize{
@@ -157,16 +159,19 @@ a:hover{
 }
 
 .sidepanel  {
-    background-color: brown;
-    width: 0;
+    background: wheat;
+    width: 0; /* the width when expanded is controlled in app.js */
     position: fixed;
     z-index: 1;
-    height: 250px;
+    height: 230px;
     top: 30%;
     left: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;  
+    padding-top: 60px;
+    border-bottom-right-radius: 13px;
+    border-top-right-radius: 13px;
+    
 }
 
 .sidepanel a {
@@ -202,12 +207,41 @@ a:hover{
 
     transform:rotate(-90deg);
 
-
-
   }
-  
   .openbtn:hover {
     background-color:#444;
   }
 
+  .tools-button {
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .tools-button:hover {
+    color: #f1f1f1;
+  }
+
+  #color-picker {
+	-webkit-appearance: none;
+    border: 1px solid black;
+    border-radius: 13px;
+    width: 100px;
+    height: 35px;
+    margin-left: 5%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 1px solid black;
+    border-radius: 13px;
+}
   

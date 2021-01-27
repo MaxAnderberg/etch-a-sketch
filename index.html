@@ -31,20 +31,19 @@
             <input type="range" id="gridsize" name="gridsize" min="1" max="100" value="16"
                 oninput="document.getElementById('gridvalue').innerHTML = this.value">
             <label id="gridvalue">16</label>
-            <button onclick="setGridSizeValue()">Create new canvas</button>
+            <button onclick="setGridSizeValue()">New canvas</button>
             <button onclick="resetCanvas()">Reset Canvas</button>
-            <label for="colorpicker">Color Picker:</label>
-            <input type="color" id="colorpicker" value="#0000ff">
-
         </div>
     </div>
 
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <button class="tools-button">Eraser</button>
+        <button class="tools-button">Black</button>
+        <button class="tools-button">Black</button>
+        <input id="color-picker" type="color" id="colorpicker" value="#0000ff">
+
+
       </div>
       <button class="openbtn" onclick="openNav()">Tools</button>  
 
