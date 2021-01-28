@@ -159,7 +159,7 @@ a:hover{
 }
 
 .sidepanel  {
-    background: wheat;
+    background: lightgray;
     width: 0; /* the width when expanded is controlled in app.js */
     position: fixed;
     z-index: 1;
@@ -171,7 +171,7 @@ a:hover{
     padding-top: 60px;
     border-bottom-right-radius: 13px;
     border-top-right-radius: 13px;
-    
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .4);
 }
 
 .sidepanel a {
@@ -190,7 +190,7 @@ a:hover{
   .sidepanel .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 10px;
     font-size: 36px;
   }
   
@@ -199,21 +199,24 @@ a:hover{
     cursor: pointer;
     background-color: #FFC164;
     color: black;
-    padding: 10px 15px;
+    padding: 10px 30px;
     border: none;
     top: 40%;
-    left: -2.2%;
+    left: -3.33%;
     position: fixed;
-
+    border-radius: 0px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
     transform:rotate(-90deg);
 
   }
+  
   .openbtn:hover {
     background-color:#444;
   }
 
   .tools-button {
-    width: 100px;
+    width: 135px;
     height: 35px;
     font-size: 20px;
     color: black;
@@ -243,5 +246,10 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
     border: 1px solid black;
     border-radius: 13px;
+}
+
+#color-picker{
+    color: #f1f1f1;
+      
 }
   

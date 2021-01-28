@@ -40,26 +40,48 @@ function setMouseOverListener() {
     // get all the cells
     let divs = document.querySelectorAll(`.simplediv`)
     // iterate over all the cells and add an eventlistener
-    divs.forEach(element => element.addEventListener("mouseover", setColor));
+    divs.forEach(element => element.addEventListener("mouseover", paintCellWithColor));
 }
 
-let color = "red"
+let color;
+function setColor(value){
+    if(!color){
+        color = "black";
+    } else {
+        color = value;
+    }
+}
+
+// this is the initial value
+setColor("black");
+
+var colorPicker = document.getElementById("color-picker")
+
+// listens for changes made to the input color picker
+colorPicker.addEventListener("input", function() {
+    setColor(colorPicker.value);
+}, false); 
+
+function getColor(){
+    console.log(color)
+    return color;
+}
+
 // color the cell
-function setColor(e) {
-    e.target.style.background = color
+function paintCellWithColor(e) {
+    e.target.style.background = getColor();
 }
 
 // reset the canvas to white
 function resetCanvas() {
     let divs = document.querySelectorAll(`.simplediv`)
     divs.forEach(element => element.style.background = "white");
-    
 }
 
 function openNav() {
     document.getElementById("mySidepanel").style.width = "200px";
-  }
-  
-  function closeNav() {
+}
+
+function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }

@@ -7,17 +7,20 @@
     <title>Pixel Sketch</title>
     <link rel="stylesheet" href="styles/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="top-nav-container">
         <div class="top-left">
-            <span> <img id="pencil-icon" src="https://img.icons8.com/ios-glyphs/96/000000/pencil--v1.png"/> Pixel Sketch</span>
+            <span> <img id="pencil-icon" src="https://img.icons8.com/ios-glyphs/96/000000/pencil--v1.png" /> Pixel
+                Sketch</span>
         </div>
         <div class="top-right">
-            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png"/><a href="https://github.com/MaxAnderberg">GitHub</a></span>
-            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/linkedin.png"/><a href="https://www.linkedin.com/in/max-anderberg-810609116?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjOYOIuVSQ1CKyiUhOofzkQ%3D%3D">LinkedIn</a></span>
+            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/github.png" /><a
+                    href="https://github.com/MaxAnderberg">GitHub</a></span>
+            <span> <img src="https://img.icons8.com/ios-glyphs/48/000000/linkedin.png" /><a
+                    href="https://www.linkedin.com/in/max-anderberg-810609116?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjOYOIuVSQ1CKyiUhOofzkQ%3D%3D">LinkedIn</a></span>
         </div>
     </nav>
 
@@ -36,18 +39,22 @@
         </div>
     </div>
 
+    <!-- Sidebutton starts here -->
     <div id="mySidepanel" class="sidepanel">
+
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <button class="tools-button">Eraser</button>
-        <button class="tools-button">Black</button>
-        <button class="tools-button">Black</button>
-        <input id="color-picker" type="color" id="colorpicker" value="#0000ff">
+        <button onclick="setColor('white')" class="tools-button">Eraser</button>
+        <button onclick="setColor('black')" class="tools-button">Black</button>
+        <button class="tools-button">Gray Scale</button>
+        <input id="color-picker" type="color" value="#000">
 
+    </div>
 
-      </div>
-      <button class="openbtn" onclick="openNav()">Tools</button>  
+    <button class="openbtn" onclick="openNav()">Tools</button>
+    <!-- Sidebutton ends here -->
 
     <script src="app.js"></script>
+
 </body>
 
 </html>
