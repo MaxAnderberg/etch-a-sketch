@@ -144,8 +144,11 @@ function resetCanvas() {
 
 function openNav() {
     document.getElementById("mySidepanel").style.width = "200px";
+    document.getElementById("openbtn").classList.add('hide')
 }
 
 function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
+    document.getElementById("openbtn").classList.remove('hide')
+
 }
