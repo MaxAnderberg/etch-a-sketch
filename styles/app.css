@@ -163,7 +163,7 @@ a:hover{
     width: 0; /* the width when expanded is controlled in app.js */
     position: fixed;
     z-index: 1;
-    height: 230px;
+    height: 285px;
     top: 30%;
     left: 0;
     overflow-x: hidden;
@@ -201,14 +201,13 @@ a:hover{
     color: black;
     padding: 10px 30px;
     border: none;
-    top: 40%;
+    top: 49%;
     left: -3.33%;
     position: fixed;
     border-radius: 0px;
     border-bottom-left-radius: 13px;
     border-bottom-right-radius: 13px;
     transform:rotate(-90deg);
-
   }
   
   .openbtn:hover {
