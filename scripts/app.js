@@ -7,36 +7,42 @@ function setGridSizeValue() {
     createGrid(document.getElementById('gridvalue').innerHTML);
 }
 
+// clears the canvas of cells
 function clearOldCells() {
-
     // get all the cells
     let divs = document.querySelectorAll(`.simplediv`)
     // remove all cells called simplediv
     divs.forEach(element => element.parentNode.removeChild(element));
 }
 
+/* 
+    create the grid based on passed value
+    calculate how many cells there needs to be (value * value)
+    create the amount of columns (value)
+*/
 function createGrid(value) {
-
     // clear out the old cells before we add new
     clearOldCells();
 
     const drawingBoard = document.getElementById("grid-container")
-    let totalCellAmount = value * value;
-
+    // calculate how many cells there are going to be in the canvas
+    let totalCellAmount = value * value; 
+    // create the number of colums
     drawingBoard.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
+    // create the "cells"
     for (let index = 1; index <= totalCellAmount; index++) {
         let div = document.createElement('div');
         div.classList.add('simplediv')
         drawingBoard.appendChild(div)
     }
-
     setMouseOverListener();
 }
 
 
 createGrid(value);
 
+// add mouse over listener for all the cells
 function setMouseOverListener() {
 
     // get all the cells
@@ -53,7 +59,7 @@ function setColor(value) {
     }
 }
 
-// this is the initial value
+// set initial color to black
 setColor("black");
 
 var colorPicker = document.getElementById("color-picker")
@@ -72,6 +78,7 @@ function getColor() {
     return color;
 }
 
+// create a random color based on hex
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var ranColor = '#';
@@ -116,7 +123,7 @@ function increaseOpacity(value) {
     }
 }
 
-// color the cell
+// paint the cell given a specific color
 function paintCellWithColor(e) {
     if (getColor() === "grayscale") {
         e.target.style.background = `#000`
