@@ -1,3 +1,5 @@
+let value = 16;  // start value of the grid size
+let color;
 
 
 // set the grid size
@@ -32,7 +34,7 @@ function createGrid(value) {
     setMouseOverListener();
 }
 
-let value = 16;
+
 createGrid(value);
 
 function setMouseOverListener() {
@@ -43,7 +45,6 @@ function setMouseOverListener() {
     divs.forEach(element => element.addEventListener("mouseover", paintCellWithColor));
 }
 
-let color;
 function setColor(value) {
     if (!color) {
         color = "black";
@@ -61,7 +62,6 @@ var colorPicker = document.getElementById("color-picker")
 colorPicker.addEventListener("input", function () {
     setColor(colorPicker.value);
 }, false);
-
 // grayscale 
 
 function colorGrayScale() {
@@ -69,7 +69,6 @@ function colorGrayScale() {
 }
 
 function getColor() {
-    console.log(color)
     return color;
 }
 
@@ -82,7 +81,7 @@ function getRandomColor() {
     return ranColor;
 }
 
-// increases the opacity from 10% to 100% 
+// increases the opacity from 10% to 100% incrementally
 function increaseOpacity(value) {
     switch (value) {
         case "0.1":
