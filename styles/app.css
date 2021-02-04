@@ -107,16 +107,11 @@ a{
     color: black;
     text-decoration: none;
     transition: 0.3s;
-    /* border-bottom:solid 1px transparent; */
-
 }
 
 a:hover{
-
-    /* border-bottom: 1px solid black;     */
     text-decoration:underline; 
     color: whitesmoke;
-
 }
 
 #gridsize{
@@ -174,7 +169,6 @@ a:hover{
       rgba(211,211,211,8),
       rgba(211,211,211,.4));
     
-    /* background: lightgray; */
     width: 0; /* the width when expanded is controlled in app.js */
     position: fixed;
     z-index: 1;
