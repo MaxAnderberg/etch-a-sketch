@@ -5,8 +5,9 @@ The etch a sketch [assignment](https://www.theodinproject.com/courses/foundation
 # Functionality
 
 * Resizeable grid 1 - 100 cells
+* * Reset the canvas 
+* * Create a new canvas based on the canvas scale
 * Random color
 * Grayscale color
 * Eraser
-* Reset the canvas functionality
 
