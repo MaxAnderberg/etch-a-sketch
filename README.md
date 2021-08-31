@@ -1,3 +1,5 @@
+![An image of the app](/images/desktop.png)
+
 # Pixel Sketch 
 
 This is one of my earlier apps that I wrote in JavaScript, it is an etch a sketch app that allows the user to essentially draw pixel art. The app features: 
